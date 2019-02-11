@@ -10,7 +10,6 @@ function MostrarAumento()
 
   Numero1=parseInt(document.getElementById("sueldo").value);
   aumento= (Numero1 * 10 / 100 );
-  Numero2=(Numero1 + aumento)
-  alert("Resultado " + Numeor);
-  
+  Numero2=(Numero1 + aumento);
+  document.getElementById("resultado").value=Numero2;
 }
