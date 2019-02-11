@@ -6,7 +6,12 @@ function MostrarDescuento()
 {
     var Numero1;
     var importe;
+    var Numero2;
     Numero1=parseFloat(document.getElementById("importe").value);
     importe= (Numero1 * 25 /100);
-    document.getElementById("resultado").value=importe;
-}
+    Numero2=(Numero1 - importe);
+    document.getElementById("resultado").value=Numero2;
+    alert("Se aplico un descuento de $ " + importe);
+
+} 
+
