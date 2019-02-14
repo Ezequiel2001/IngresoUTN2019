@@ -17,19 +17,23 @@ function Sumar ()
 
 }
 function Promedio () 
-{
+{   var suma;
     Numero1=parseFloat(document.getElementById("PrecioUno").value);
     Numero2=parseFloat(document.getElementById("PrecioDos").value);
     Numero3=parseFloat(document.getElementById("PrecioTres").value);
-    Resultado=(Numero1+Numero2+Numero3 / 3);
-    alert("El promedio es " + Resultado);
+    Resultado=Numero1+Numero2+Numero3;
+    suma= Resultado / 3;
+    alert("El promedio es " + suma);
 }
 function PrecioFinal () 
-{
+{     var iva;
+      var precioconIva;
     Numero1=parseFloat(document.getElementById("PrecioUno").value);
     Numero2=parseFloat(document.getElementById("PrecioDos").value);
     Numero3=parseFloat(document.getElementById("PrecioTres").value);
-     Resultado=(Numero1+Numero2+Numero3*0.21);
-     alert("El resultado mas el iva es " + Resultado);
+     Resultado=Numero1+Numero2+Numero3;
+    iva=Resultado * 21/100;
+    precioconIva=Resultado + iva ;
+     alert("El resultado mas el iva es " + precioconIva);
 
 }
