@@ -13,43 +13,74 @@ var descuento;
 var resultado;
 var descuento2;
 var marca;
+var iibb;
 function CalcularPrecio() {
     lamparas = parseFloat(document.getElementById("Cantidad").value);
     marca = document.getElementById("Marca").value;
+    iibb = parseFloat(document.getElementById("precioDescuento").value);
     if (lamparas >= 6) {
         descuento = lamparas * 35;
         descuento2 = descuento * 50 / 100;
         resultado = descuento - descuento2;
-        document.getElementById("precioDescuento").value = resultado.toFixed(2);
+        document.getElementById("precioDescuento").value = "$" + resultado.toFixed(2);
     }
-    else if (lamparas == 5 && marca == "ArgentinaLuz") {
-        descuento = lamparas * 35;
-        descuento2 = descuento * 40 / 100;
-        resultado = descuento - descuento2;
-        document.getElementById("precioDescuento").value = resultado.toFixed(2);
-    }
-    else if (lamparas == 5 && marca != "ArgentinaLuz") {
-        descuento = lamparas * 35;
-        descuento2 = descuento * 30 / 100;
-        resultado = descuento - descuento2;
-        document.getElementById("precioDescuento").value = resultado.toFixed(2);
+    else if (lamparas == 5) {
+        if (marca == "ArgentinaLuz") {
+            descuento = lamparas * 35;
+            descuento2 = descuento * 40 / 100;
+            resultado = descuento - descuento2;
+            document.getElementById("precioDescuento").value = "$" + resultado.toFixed(2);
+        }
+        else {
+            descuento = lamparas * 35;
+            descuento2 = descuento * 30 / 100;
+            resultado = descuento - descuento2;
+            document.getElementById("precioDescuento").value = "$" + resultado.toFixed(2);
+        }
 
     }
-    else if (lamparas == 4 && marca == "ArgentinaLuz" || "FelipeLamparas") {
-        descuento = lamparas * 35;
-        descuento2 = descuento * 25 / 100;
-        resultado = descuento - descuento2;
-        document.getElementById("precioDescuento").value = resultado.toFixed(2);
-    }
-    else if (lamparas == 4 && marca != "Argentinaluz" || "FelipeLamparas") {
-        descuento = lamparas * 35;
-        descuemto2 = descuento * 20 / 100;
-        resultado = descuento - descuento2;
-        document.getElementById("precioDescuento").value = resultado.toFixed(2);
-    }
-    else if (lamparas){
-        
-    }
+    else if (lamparas == 4) {
+        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+            descuento = lamparas * 35;
+            descuento2 = descuento * 25 / 100;
+            resultado = descuento - descuento2;
+            document.getElementById("precioDescuento").value = "$" + resultado.toFixed(2);
+        }
+        else {
+            descuento = lamparas * 35;
+            descuento2 = descuento * 20 / 100;
+            resultado = descuento - descuento2;
+            document.getElementById("precioDescuento").value = "$" + resultado.toFixed(2);
+        }
 
 
+    }
+    else if (lamparas == 3) {
+        if (marca == "ArgentinaLuz") {
+            descuento = lamparas * 35;
+            descuento2 = descuento * 15 / 100;
+            resultado = descuento - descuento2;
+            document.getElementById("precioDescuento").value = "$" + resultado.toFixed(2);
+        }
+        else if (marca == "FelipeLamparas") {
+            descuento = lamparas * 35;
+            descuento2 = descuento * 10 / 100;
+            resultado = descuento - descuento2;
+            document.getElementById("precioDescuento").value = "$" + resultado.toFixed(2);
+
+        }
+        else {
+            descuento = lamparas * 35;
+            descuento2 = descuento * 5 / 100;
+            resultado = descuento - descuento2;
+            document.getElementById("precioDescuento").value = "$" + resultado.toFixed(2);
+        }
+    }
+
+    if (iibb >= 120) {
+        var resultadoiibb = iibb * 10 / 100;
+        iibb += resultadoiibb;
+        alert("Usted pago $" + resultado2.toFixed(2) + " de IIBB.");
+        //document.getElementById("PrecioDescuento").value = "$" + resultado2.toFixed(2);
+    }
 }
