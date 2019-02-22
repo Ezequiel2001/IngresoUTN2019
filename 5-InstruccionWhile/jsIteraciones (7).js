@@ -4,6 +4,7 @@ function Mostrar()
 	var contador=0;
 	var acumulador=0;
 	var respuesta='si';
+	whil
 
 
 document.getElementById('suma').value=acumulador;
