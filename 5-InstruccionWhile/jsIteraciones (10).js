@@ -39,13 +39,13 @@ function Mostrar() {
 	diferencia = cantidadpositivo - cantidadnegativo;
 
 	document.write("La suma de los negativos es: " + negativo + "<br>");
-	document.write("La suma de los positivos es: " + positivo);
-	document.write("La cantidad de positivos es: " + cantidadpositivo);
-	document.write("La cantidad de negativos es: " + cantidadnegativo);
-	document.write("La cantidad de ceros es: " + cantidadceros);
-	documenti.write("La cantidad de números pares es: " + cantidadpares);
-	document.write("El promedio de positivos es: " + promediopositivo);
-	document.write("El promedios de negativos es: " + promedionegativo);
-	document.write("La diferencia entre positivos y negativos es: " + diferencia);
+	document.write("La suma de los positivos es: " + positivo + "<br>");
+	document.write("La cantidad de positivos es: " + cantidadpositivo + "<br>");
+	document.write("La cantidad de negativos es: " + cantidadnegativo + "<br>");
+	document.write("La cantidad de ceros es: " + cantidadceros + "<br>");
+	document.write("La cantidad de números pares es: " + cantidadpares +"<br>");
+	document.write("El promedio de positivos es: " + promediopositivo + "<br>");
+	document.write("El promedios de negativos es: " + promedionegativo + "<br>");
+	document.write("La diferencia entre positivos y negativos es: " + diferencia + "<br>");
 
 }//FIN DE LA FUNCIÓN
